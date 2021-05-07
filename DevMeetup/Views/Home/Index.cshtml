@@ -1,0 +1,22 @@
+﻿@* model for banner *@
+@model byte[]
+
+@* prepare src for img tag *@ 
+@{ var imageSrc = $"data:image/png;base64,{Convert.ToBase64String(Model)}"; }
+
+
+@* display banner *@
+<div>
+    <img src="@imageSrc" />
+</div>
+
+
+<h1>
+    Hello, Dev MeetUp!
+</h1>
+
+@Html.Partial("_FrameworkVersion")
+
+<div>
+    @Html.ActionLink("Invoke fake auth endpoint", "FakeAuthEndpoint")
+</div>
