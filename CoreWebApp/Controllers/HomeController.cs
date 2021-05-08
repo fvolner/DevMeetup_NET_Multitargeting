@@ -1,16 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
+using Resources;
+
 namespace CoreWebApp.Controllers
 {
     public class HomeController : Controller
     {
-        //public ActionResult Index()
-        //{
-        //    CookieHelper.AddFakeAuthToken();
+        public IActionResult Index()
+        {
+            //CookieHelper.AddFakeAuthToken();
 
-        //    var banner = ImagesProvider.Kentico();
-        //    return View(banner);
-        //}
+            var banner = ImagesProvider.Kentico();
+
+            return View(banner);
+        }
 
 
         //public ActionResult FakeAuthEndpoint()
