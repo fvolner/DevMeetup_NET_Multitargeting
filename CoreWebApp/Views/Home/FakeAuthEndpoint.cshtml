@@ -1,0 +1,14 @@
+﻿@* model for banner *@
+@*@model byte[]
+
+@{ ViewBag.Title = "Fake auth endpoint"; }
+
+<h2>
+    The protected result looks like this
+</h2>
+
+<div>
+    @Html.ConvertByteToString(Model)
+</div>
+
+@Html.Partial("_FrameworkVersion")*@
