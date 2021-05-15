@@ -1,0 +1,17 @@
+﻿<Project>
+
+	<PropertyGroup>
+		<TargetFrameworks>net48;netstandard2.1</TargetFrameworks>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' != 'net48'">
+		<Compile Remove="*.Framework.cs" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' != 'netstandard2.1'">
+		<Compile Remove="*.Standard.cs" />
+		<None Include="*.Standard.cs" />
+	</ItemGroup>
+
+</Project>

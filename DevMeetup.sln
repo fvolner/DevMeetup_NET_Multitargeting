@@ -7,15 +7,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetframeworkWebApp", "DevMe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{7C47C0A4-AE06-4F6E-B42F-A7AAA3D574C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "Resources\Resources.csproj", "{7056BB4D-D042-4BC4-AE5B-2034E0E28FB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resources", "Resources\Resources.csproj", "{7056BB4D-D042-4BC4-AE5B-2034E0E28FB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protection", "Protection\Protection.csproj", "{2E6C89D0-4B51-42EA-9AA2-3C95B45432C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Protection", "Protection\Protection.csproj", "{2E6C89D0-4B51-42EA-9AA2-3C95B45432C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cookies", "Cookies\Cookies.csproj", "{46968FC3-B5D8-4D27-9680-4D52F34C9E98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cookies", "Cookies\Cookies.csproj", "{46968FC3-B5D8-4D27-9680-4D52F34C9E98}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcUtils", "MvcUtils\MvcUtils.csproj", "{E9E4959D-B9B7-48F8-A45C-8C8CE6F0FC4F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreWebApp", "CoreWebApp\CoreWebApp.csproj", "{7C0D0A60-51B8-4531-AA75-2D3DC5812CF6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7A33AA2F-F499-4499-AB66-F9D44487401C}"
+	ProjectSection(SolutionItems) = preProject
+		multitarget.props = multitarget.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
