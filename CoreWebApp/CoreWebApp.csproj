@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Resources\Resources.csproj" />
     <ProjectReference Include="..\Cookies\Cookies.csproj" />
+    <ProjectReference Include="..\Protection\Protection.csproj" />
   </ItemGroup>
 
 </Project>

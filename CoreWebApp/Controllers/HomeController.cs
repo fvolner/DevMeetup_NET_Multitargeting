@@ -1,7 +1,10 @@
 ﻿using Cookies;
 
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+
+using Protection;
 
 using Resources;
 
@@ -26,12 +29,12 @@ namespace CoreWebApp.Controllers
         }
 
 
-        //public ActionResult FakeAuthEndpoint()
-        //{
-        //    var token = CookieHelper.MyAuthCookie();
-        //    var protectedData = ProtectionManager.ProtectMyAuth(token);
+        public ActionResult FakeAuthEndpoint([FromServices] IDataProtectionProvider dataProtectionProvider)
+        {
+            var token = CookieHelper.MyAuthCookie(httpContextAccessor);
+            var protectedData = ProtectionManager.ProtectMyAuth(token, dataProtectionProvider);
 
-        //    return View(protectedData);
-        //}
+            return View(protectedData);
+        }
     }
 }
