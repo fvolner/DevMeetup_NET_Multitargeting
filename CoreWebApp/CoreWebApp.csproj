@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Resources\Resources.csproj" />
+    <ProjectReference Include="..\Cookies\Cookies.csproj" />
   </ItemGroup>
 
 </Project>

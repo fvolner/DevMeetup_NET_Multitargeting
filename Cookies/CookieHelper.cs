@@ -1,23 +1,34 @@
-﻿using System.Web;
+﻿#if NETSTANDARD
+using Microsoft.AspNetCore.Http; 
+#endif
 
 namespace Cookies
 {
     public class CookieHelper
     {
+#if NETFRAMEWORK
         public static string MyAuthCookie()
         {
-            return HttpContext.Current.Request.Cookies["MyToken"]?.Value;
+            return new CookieService().MyAuthCookie();
         }
 
 
         public static void AddFakeAuthToken()
         {
-            var cookie = new HttpCookie("MyToken")
-            {
-                Value = "token value"
-            };
-
-            HttpContext.Current.Response.Cookies.Add(cookie);
+            new CookieService().AddFakeAuthToken();
         }
+#endif
+#if NETSTANDARD
+        public static string MyAuthCookie(IHttpContextAccessor httpContextAccessor)
+        {
+            return new CookieService(httpContextAccessor).MyAuthCookie();
+        }
+
+
+        public static void AddFakeAuthToken(IHttpContextAccessor httpContextAccessor)
+        {
+            new CookieService(httpContextAccessor).AddFakeAuthToken();
+        }
+#endif
     }
 }
