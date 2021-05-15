@@ -12,6 +12,7 @@
     <ProjectReference Include="..\Resources\Resources.csproj" />
     <ProjectReference Include="..\Cookies\Cookies.csproj" />
     <ProjectReference Include="..\Protection\Protection.csproj" />
+	<ProjectReference Include="..\MvcUtils\MvcUtils.csproj" />
   </ItemGroup>
 
 </Project>
